@@ -1,13 +1,31 @@
-fetch("https://referential.p.rapidapi.com/v1/timezone?fields=offset%2Cdaylights_offset%2Cdaylights%2Cdaylights_code%2Ctimezone&lang=de", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "32213ffac4mshe7815035cb0c029p1d511bjsn60b02e8cf927",
-		"x-rapidapi-host": "referential.p.rapidapi.com"
+// Init Github
+const github = new GitHub;
+// Init UI
+const ui = new UI;
+
+
+// Search input 
+const searchUser = document.getElementById('searchUser');
+
+//Search input event listener 
+
+searchUser.addEventListener('keyup', () => {
+	//Get input text 
+	const userText = searchUser.value;
+
+	if(userText !== '') {
+		// Make http call
+		github.getUser(userText)
+		 .then(data => {
+			 if(data.prifile.message === 'Not Found') {
+				// Show Aler
+
+			 }else {
+				// Show Profile
+				ui.showProfile(data.prifile)
+			 }
+		 })
+	}else {
+		// Clear profile
 	}
 })
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
