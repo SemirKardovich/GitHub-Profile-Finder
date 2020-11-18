@@ -19,13 +19,15 @@ searchUser.addEventListener('keyup', () => {
 		 .then(data => {
 			 if(data.prifile.message === 'Not Found') {
 				// Show Aler
-
+				ui.showAlert('User not found', 'alert alert-danger');
 			 }else {
 				// Show Profile
-				ui.showProfile(data.prifile)
+				ui.showProfile(data.prifile);
+				ui.showRepos(data.repos);
 			 }
 		 })
 	}else {
 		// Clear profile
+		ui.clearProfile();
 	}
 })
