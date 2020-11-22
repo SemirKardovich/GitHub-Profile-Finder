@@ -18,7 +18,13 @@
         <div class="search card card-body mt-5">
             <h1>Search GitHub Users</h1>
             <p class="lead">Enter a username to fetch a user profile and repos</p>
-            <input type="text" id="searchUser" class="form-control" placeholder="GitHub Username...">
+            <div class="input-group mb-3">
+                <input type="text" id="searchUser" class="form-control" placeholder="GitHub Username...">
+                <div class="input-group-prepend">
+                  <button class="btn bg-primary font-weight-bold ml-2" type="button" id="search-btn">Search !!!</button>
+                </div>  
+            </div>
+            
         </div>
         <br>
         <div id="profile"></div>
