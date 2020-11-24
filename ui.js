@@ -12,8 +12,8 @@ class UI {
                         <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
                     </div>
                     <div class="col-md-9">
-                        <span class="badge badge-primary">Publick Repos : ${user.public_repos}</span>
-                        <span class="badge badge-info">Publick Gists : ${user.public_gists}</span>
+                        <span class="badge badge-primary">Public Repos : ${user.public_repos}</span>
+                        <span class="badge badge-info">Public Gists : ${user.public_gists}</span>
                         <span class="badge badge-success">Followers : ${user.followers}</span>
                         <span class="badge badge-danger">Following : ${user.following}</span>
                         <br><br>
